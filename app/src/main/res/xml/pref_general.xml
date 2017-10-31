@@ -1,0 +1,41 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="switch_average_calibration"
+        android:persistent="true"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:summary="@string/pref_title_average_calibration_description"
+        android:title="@string/pref_title_average_calibration" />
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="switch_average_measurement"
+        android:persistent="true"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:summary="@string/pref_title_average_measurement_description"
+        android:title="@string/pref_title_average_measurement" />
+
+
+    <PreferenceCategory
+        android:key="prefcat_scaling"
+        android:title="Scaling">
+        <SwitchPreference
+            android:defaultValue="true"
+            android:disableDependentsState="true"
+            android:key="switch_autoscale"
+            android:persistent="true"
+            android:summary="@string/pref_title_autoscale_description"
+            android:title="@string/pref_title_autoscale" />
+        <nl.thenanne.tjeerdhans.spectrometer.NumberPickerPreference
+            android:defaultValue="10"
+            android:dependency="switch_autoscale"
+            android:key="number_integration_time"
+            android:persistent="true"
+            android:summary="@string/pref_title_integration_time_description"
+            android:title="@string/pref_title_integration_time" />
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

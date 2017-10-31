@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Spectrometer</string>
+
+    <!-- Strings related to Settings -->
+    <string name="pref_key_average_calibration">switch_average_calibration</string>
+    <string name="pref_title_average_calibration">Average calibration</string>
+    <string name="pref_title_average_calibration_description">Average calibration description</string>
+    <string name="pref_key_average_measurement">switch_average_measurement</string>
+    <string name="pref_title_average_measurement">Average measurement</string>
+    <string name="pref_title_average_measurement_description">Average measurement description</string>
+    <string name="pref_key_autoscale">switch_autoscale</string>
+    <string name="pref_title_autoscale">Autoscale</string>
+    <string name="pref_title_autoscale_description">Autoscale description</string>
+    <string name="pref_key_integration_time">number_integration_time</string>
+    <string name="pref_title_integration_time">Integration time (ms)</string>
+    <string name="pref_title_integration_time_description">Integration time in milliseconds</string>
+
+
+    <!-- titles -->
+    <string name="title_activity_main">MainActivity</string>
+    <string name="action_settings">Settings</string>
+
+</resources>

@@ -2,9 +2,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="nl.thenanne.tjeerdhans.specter.MainActivity" >
-    <item android:id="@+id/action_settings"
-        android:title="@string/action_settings"
+    <item
+        android:title="@string/title_action_share"
+        android:id="@+id/action_share"
+        android:icon="@android:drawable/ic_menu_share"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@android:drawable/ic_menu_preferences"
         android:orderInCategory="100"
-        app:showAsAction="always"
-        />
+        android:title="@string/title_action_settings"
+        app:showAsAction="always" />
 </menu>

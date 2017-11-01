@@ -2,16 +2,17 @@ package nl.thenanne.tjeerdhans.spectrometer;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
-import java.util.prefs.Preferences;
+import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.data.LineDataSet;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,9 +20,25 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        // in this example, a LineChart is initialized from xml
+        LineChart chart = findViewById(R.id.chart);
+
+        Spectrofotogram spectrofotogram = DataHelper.RandomSpectrofotogram("v1");
+
+        ArrayList<Entry> values = new ArrayList<>();
+        int count = 10;
+        for (int i = 0; i < spectrofotogram.Values.size(); i++) {
+            values.add(new Entry(i, spectrofotogram.Values.get(i)));
+        }
+
+        LineDataSet dataSet = new LineDataSet(values, "Label");
+
+        LineData lineData = new LineData(dataSet);
+        chart.setData(lineData);
+        chart.invalidate(); // refresh
     }
 
     @Override

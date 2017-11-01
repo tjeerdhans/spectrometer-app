@@ -17,7 +17,9 @@
 
 
     <!-- titles -->
-    <string name="title_activity_main">MainActivity</string>
-    <string name="action_settings">Settings</string>
-
+    <string name="title_action_settings">Settings</string>
+    <string name="title_action_share">Share</string>
+    <string name="title_button_calibration">Cal</string>
+    <string name="title_button_measurement">M</string>
+    <string name="title_togglebutton_continuous">Cont</string>
 </resources>

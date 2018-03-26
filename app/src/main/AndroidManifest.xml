@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="nl.thenanne.tjeerdhans.spectrometer">
-
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <!-- A location permission is required because Bluetooth scans can be used to gather information
+    about the location of the user. This information may come from the user's own devices, as well
+    as Bluetooth beacons in use at locations such as shops and transit facilities.-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
